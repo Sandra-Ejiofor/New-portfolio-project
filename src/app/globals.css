@@ -10,17 +10,52 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+  --font-display: var(--font-newsreader);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Figma color styles */
+  --color-green-0: #000000;
+  --color-green-10: #273519;
+  --color-green-20: #233709;
+  --color-green-45: #687d4a;
+  --color-green-50: #4f6333;
+  --color-green-90: #d2ebad;
+  --color-green-97: #f0ffd6;
+  --color-green-98: #f9fef8;
+  --color-green-100: #ffffff;
+  --color-black-20: #303030;
+  --color-black-40: #5e5e5e;
+  --color-black-50: #787878;
+  --color-black-60: #919191;
+  --color-black-70: #ababab;
+  --color-black-80: #c7c7c7;
+  --color-black-90: #e3e3e3;
+  --color-black-92: #e8e8e8;
+  --color-black-98: #ededed;
+  --color-black-99: #f9f9f9;
+
+  /* Figma type styles share a single -2% tracking value */
+  --tracking-tightest: -0.02em;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-scroll linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-scroll linear infinite reverse;
 }
