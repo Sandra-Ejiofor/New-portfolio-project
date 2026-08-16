@@ -106,6 +106,8 @@ function ArrowButton({ href, label }: { href: string; label: string }) {
   return (
     <a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="inline-flex h-9 shrink-0 items-center justify-center gap-1 rounded-full border border-black-90 px-3 py-2 shadow-[0px_4px_7px_0px_rgba(104,144,50,0.25)] hover:bg-black-90"
     >
       <span className="font-sans text-xs tracking-tightest whitespace-nowrap text-green-20">
@@ -191,18 +193,7 @@ export default function FeaturedWorks() {
           </h2>
         </div>
 
-        <div className="flex items-center rounded-[20px] border-[0.4px] border-black-98 bg-white p-1 shadow-[0px_7px_6px_rgba(200,200,200,0.25)]">
-          <div className="rounded-xl bg-green-45 px-3 py-1.5">
-            <p className="font-sans text-xs font-medium tracking-tightest whitespace-nowrap text-white">
-              Projects
-            </p>
-          </div>
-          <div className="rounded-xl px-3 py-1.5">
-            <p className="font-sans text-xs font-medium tracking-tightest whitespace-nowrap text-black-70">
-              Design explorations
-            </p>
-          </div>
-        </div>
+
       </div>
 
       <div className="flex w-full max-w-[1340px] flex-col gap-6 lg:gap-[24px]">

@@ -26,8 +26,8 @@ export default function Footer() {
             <a
               key={link.label}
               href={link.href}
-              target={link.href.startsWith("http") ? "_blank" : undefined}
-              rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              target="_blank"
+              rel="noopener noreferrer"
               className="[text-underline-position:from-font] w-full underline decoration-solid decoration-from-font hover:opacity-70"
             >
               {link.label}

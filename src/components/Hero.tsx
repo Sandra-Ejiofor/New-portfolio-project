@@ -15,6 +15,8 @@ export default function Hero() {
 
       <a
         href="mailto:Sanzyblues708@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
         className="mt-6 inline-flex h-10 shrink-0 items-center justify-center rounded-full bg-white px-3 py-2 font-sans text-xs font-normal tracking-tightest whitespace-nowrap text-green-10 shadow-[0px_4px_3.5px_rgba(199,233,152,0.25)] hover:bg-black-90 sm:mt-[24px]"
       >
         Send a message

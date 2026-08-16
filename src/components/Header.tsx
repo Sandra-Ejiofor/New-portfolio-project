@@ -63,6 +63,8 @@ export default function Header() {
 
           <a
             href="mailto:Sanzyblues708@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex h-9 shrink-0 items-center justify-center rounded-full bg-green-50 px-3 py-2 font-sans text-xs font-normal tracking-tightest whitespace-nowrap text-white shadow-[0px_4px_3.5px_rgba(104,144,50,0.25)] hover:opacity-90 sm:h-10"
           >
             Contact me
