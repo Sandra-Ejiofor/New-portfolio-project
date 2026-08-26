@@ -17,11 +17,46 @@ type Project = {
   fit?: "cover" | "contain";
   /** hide the "View live Project" button, default shows it */
   showLive?: boolean;
+  /** hide the "View Case Study" button, default shows it */
+  showCaseStudy?: boolean;
 };
 
 const IMG = "/images/featured-works";
 
 const projects: Project[] = [
+  {
+    title: "Interview Coder Redesign",
+    description:
+      "Redesigned Interview Coder's landing page to communicate product value better and drive more app downloads.",
+    liveHref: "https://www.interviewcoder.co/",
+    caseStudyHref:
+      "https://www.figma.com/design/Jt5lKz48rqNUmWbqjGGGwf/New-Portfolio-Project?node-id=206-941&t=7QkGZl7v47eZBxlq-4",
+    direction: "right",
+    showCaseStudy: false,
+    tiles: [
+      { src: `${IMG}/interviewcoder-1.png` },
+      { src: `${IMG}/interviewcoder-2.png` },
+      { src: `${IMG}/interviewcoder-3.png` },
+      { src: `${IMG}/interviewcoder-4.png` },
+      { src: `${IMG}/interviewcoder-5.png` },
+    ],
+  },
+  {
+    title: "Ember landing page",
+    description:
+      "Designed Ember's landing page to showcase the product's value proposition with clarity in a simple, unique style.",
+    liveHref: "https://myember.app/",
+    caseStudyHref:
+      "https://www.figma.com/design/Jt5lKz48rqNUmWbqjGGGwf/New-Portfolio-Project?node-id=206-941&t=7QkGZl7v47eZBxlq-4",
+    direction: "left",
+    showCaseStudy: false,
+    tiles: [
+      { src: `${IMG}/ember-1.png` },
+      { src: `${IMG}/ember-2.png` },
+      { src: `${IMG}/ember-3.png` },
+      { src: `${IMG}/ember-4.png` },
+    ],
+  },
   {
     title: "Scrubbe - Cybersecurity Platform",
     description:
@@ -29,6 +64,7 @@ const projects: Project[] = [
     liveHref: "https://www.scrubbe.com/",
     caseStudyHref: "https://www.behance.net/gallery/254328609/Incident-Managemnet",
     direction: "right",
+    showLive: false,
     tiles: [
       { src: `${IMG}/scrubbe-1.png` },
       { src: `${IMG}/scrubbe-2.png` },
@@ -233,7 +269,9 @@ export default function FeaturedWorks() {
                   {project.showLive !== false && (
                     <ArrowButton href={project.liveHref} label="View live Project" />
                   )}
-                  <ArrowButton href={project.caseStudyHref} label="View Case Study" />
+                  {project.showCaseStudy !== false && (
+                    <ArrowButton href={project.caseStudyHref} label="View Case Study" />
+                  )}
                 </div>
               </div>
               <p className="font-sans text-sm tracking-tightest text-black-40 lg:w-[412px] lg:text-[14px]">

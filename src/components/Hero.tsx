@@ -5,7 +5,7 @@ export default function Hero() {
     <div className="relative z-10 flex flex-col items-center px-4 pt-10 pb-16 text-center sm:px-6 sm:pt-14 md:pt-20 lg:pt-[80px]">
       <div className="flex w-full max-w-[511px] flex-col items-center gap-4 sm:gap-[16px]">
         <h1 className="w-full font-display text-4xl leading-[1.3] font-semibold tracking-tightest text-white sm:text-5xl lg:text-[48px]">
-          Design partner for high-growth startup
+          I help founders build products people want to use and pay for
         </h1>
         <p className="w-full font-sans text-sm leading-[1.3] font-medium tracking-tightest text-black-98 sm:text-base">
           World-class web and product design for high-growth startups built
