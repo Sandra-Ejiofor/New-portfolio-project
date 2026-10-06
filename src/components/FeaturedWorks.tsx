@@ -25,6 +25,23 @@ const IMG = "/images/featured-works";
 
 const projects: Project[] = [
   {
+    title: "Interview Coder Redesign",
+    description:
+      "Redesigned Interview Coder's landing page to communicate product value better and drive more app downloads.",
+    liveHref: "https://www.interviewcoder.co/",
+    caseStudyHref:
+      "https://www.figma.com/design/Jt5lKz48rqNUmWbqjGGGwf/New-Portfolio-Project?node-id=206-941&t=7QkGZl7v47eZBxlq-4",
+    direction: "right",
+    showCaseStudy: false,
+    tiles: [
+      { src: `${IMG}/interviewcoder-1.png` },
+      { src: `${IMG}/interviewcoder-2.png` },
+      { src: `${IMG}/interviewcoder-3.png` },
+      { src: `${IMG}/interviewcoder-4.png` },
+      { src: `${IMG}/interviewcoder-5.png` },
+    ],
+  },
+  {
     title: "Ember landing page",
     description:
       "Designed Ember's landing page to showcase the product's value proposition with clarity in a simple, unique style.",
