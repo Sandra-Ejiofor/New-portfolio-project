@@ -4,6 +4,8 @@ type Tile = {
   src: string;
   /** decorative background frame the screenshot sits inside, if any */
   frame?: string;
+  /** per-tile override: "contain" prevents cropping for tall/narrow images */
+  fit?: "cover" | "contain";
 };
 
 type Project = {
@@ -25,55 +27,18 @@ const IMG = "/images/featured-works";
 
 const projects: Project[] = [
   {
-    title: "Interview Coder Redesign",
+    title: "Airtape",
     description:
-      "Redesigned Interview Coder's landing page to communicate product value better and drive more app downloads.",
-    liveHref: "https://www.interviewcoder.co/",
-    caseStudyHref:
-      "https://www.figma.com/design/Jt5lKz48rqNUmWbqjGGGwf/New-Portfolio-Project?node-id=206-941&t=7QkGZl7v47eZBxlq-4",
+      "Airtape is a browser-based recording platform that helps content creators, podcasters, and businesses record high-quality audio and video remotely. The platform makes it easy to record podcasts, interviews, video testimonials, and product demonstrations without requiring participants to download software.",
+    liveHref: "https://airtape.co/",
+    caseStudyHref: "#",
     direction: "right",
     showCaseStudy: false,
     tiles: [
-      { src: `${IMG}/interviewcoder-1.png` },
-      { src: `${IMG}/interviewcoder-2.png` },
-      { src: `${IMG}/interviewcoder-3.png` },
-      { src: `${IMG}/interviewcoder-4.png` },
-      { src: `${IMG}/interviewcoder-5.png` },
-    ],
-  },
-  {
-    title: "Ember landing page",
-    description:
-      "Designed Ember's landing page to showcase the product's value proposition with clarity in a simple, unique style.",
-    liveHref: "https://myember.app/",
-    caseStudyHref:
-      "https://www.figma.com/design/Jt5lKz48rqNUmWbqjGGGwf/New-Portfolio-Project?node-id=206-941&t=7QkGZl7v47eZBxlq-4",
-    direction: "left",
-    showCaseStudy: false,
-    tiles: [
-      { src: `${IMG}/ember-1.png` },
-      { src: `${IMG}/ember-2.png` },
-      { src: `${IMG}/ember-3.png` },
-      { src: `${IMG}/ember-4.png` },
-    ],
-  },
-  {
-    title: "Scrubbe - Cybersecurity Platform",
-    description:
-      "Scrubbe is a developer-first incident management platform that helps teams detect and resolve outages faster. It reduces downtime through automated alerts, clear ownership and simple workflows.",
-    liveHref: "https://www.scrubbe.com/",
-    caseStudyHref: "https://www.behance.net/gallery/254328609/Incident-Managemnet",
-    direction: "right",
-    showLive: false,
-    tiles: [
-      { src: `${IMG}/scrubbe-1.png` },
-      { src: `${IMG}/scrubbe-2.png` },
-      { src: `${IMG}/scrubbe-3.png` },
-      { src: `${IMG}/scrubbe-4.png` },
-      { src: `${IMG}/scrubbe-5.png` },
-      { src: `${IMG}/scrubbe-6.png` },
-      { src: `${IMG}/scrubbe-7.png` },
-      { src: `${IMG}/scrubbe-8.png` },
+      { src: `${IMG}/airtape-1.png` },
+      { src: `${IMG}/airtape-2.png` },
+      { src: `${IMG}/airtape-3.png`, fit: "contain" },
+      { src: `${IMG}/airtape-4.png`, fit: "contain" },
     ],
   },
   {
@@ -94,6 +59,7 @@ const projects: Project[] = [
     liveHref: "#",
     caseStudyHref: "https://www.behance.net/gallery/254329813/Buddy-Gaming-app",
     direction: "left",
+    showLive: false,
     tiles: [
       { src: `${IMG}/buddy-1.png` },
       { src: `${IMG}/buddy-2.png`, frame: `${IMG}/buddy-frame.png` },
@@ -101,6 +67,39 @@ const projects: Project[] = [
       { src: `${IMG}/buddy-4.png`, frame: `${IMG}/buddy-frame.png` },
       { src: `${IMG}/buddy-5.png`, frame: `${IMG}/buddy-frame.png` },
       { src: `${IMG}/buddy-6.png` },
+    ],
+  },
+  {
+    title: "Interview Coder Redesign",
+    description:
+      "Redesigned Interview Coder's landing page to communicate product value better and drive more app downloads.",
+    liveHref: "https://www.interviewcoder.co/",
+    caseStudyHref:
+      "https://www.figma.com/design/Jt5lKz48rqNUmWbqjGGGwf/New-Portfolio-Project?node-id=206-941&t=7QkGZl7v47eZBxlq-4",
+    direction: "right",
+    showCaseStudy: false,
+    tiles: [
+      { src: `${IMG}/interviewcoder-1.png` },
+      { src: `${IMG}/interviewcoder-2.png` },
+      { src: `${IMG}/interviewcoder-3.png` },
+      { src: `${IMG}/interviewcoder-4.png` },
+      { src: `${IMG}/interviewcoder-5.png` },
+    ],
+  },
+  {
+    title: "Scrubbe - Cybersecurity Platform",
+    description:
+      "Scrubbe is a developer-first incident management platform that helps teams detect and resolve outages faster. It reduces downtime through automated alerts, clear ownership and simple workflows.",
+    liveHref: "https://www.scrubbe.com/incident-response",
+    caseStudyHref: "https://www.behance.net/gallery/254328609/Incident-Managemnet",
+    direction: "left",
+    fit: "contain",
+    tiles: [
+      { src: `${IMG}/scrubbe-new-1.png` },
+      { src: `${IMG}/scrubbe-new-2.png` },
+      { src: `${IMG}/scrubbe-new-3.png` },
+      { src: `${IMG}/scrubbe-new-4.png` },
+      { src: `${IMG}/scrubbe-new-5.png` },
     ],
   },
   {
@@ -134,6 +133,22 @@ const projects: Project[] = [
       { src: `${IMG}/genzad-3.png` },
       { src: `${IMG}/genzad-4.png` },
       { src: `${IMG}/genzad-5.png` },
+    ],
+  },
+  {
+    title: "Ember landing page",
+    description:
+      "Designed Ember's landing page to showcase the product's value proposition with clarity in a simple, unique style.",
+    liveHref: "https://myember.app/",
+    caseStudyHref:
+      "https://www.figma.com/design/Jt5lKz48rqNUmWbqjGGGwf/New-Portfolio-Project?node-id=206-941&t=7QkGZl7v47eZBxlq-4",
+    direction: "right",
+    showCaseStudy: false,
+    tiles: [
+      { src: `${IMG}/ember-1.png` },
+      { src: `${IMG}/ember-2.png` },
+      { src: `${IMG}/ember-3.png` },
+      { src: `${IMG}/ember-4.png` },
     ],
   },
 ];
@@ -188,7 +203,14 @@ function ProjectTicker({
           >
             <div className="relative size-full overflow-hidden rounded-[9px] border-[1.1px] border-black-90 bg-black-92">
               {tile.frame && (
-                <Image src={tile.frame} alt="" fill className="object-cover" sizes="500px" />
+                <Image
+                  src={tile.frame}
+                  alt=""
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 500px"
+                  quality={100}
+                />
               )}
               <Image
                 src={tile.src}
@@ -197,11 +219,12 @@ function ProjectTicker({
                 className={
                   tile.frame
                     ? "object-contain p-[6%]"
-                    : fit === "contain"
+                    : (tile.fit ?? fit) === "contain"
                       ? "object-contain"
                       : "object-cover"
                 }
-                sizes="500px"
+                sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 500px"
+                quality={100}
               />
             </div>
           </div>
